@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" crossorigin="">
+   <link rel="stylesheet" href="swiper-bundle.min.css">
+   <link rel="stylesheet" href="styles.css">
+   <link href="common.css" rel="stylesheet" />
+
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+   <title>Software Training</title>
+   <link rel="stylesheet" type="text/css" target="_blank" href="style.css" />
+   <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+   <link rel="stylesheet"
+      href="https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css" />
+   <link rel="stylesheet" href="https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css" />
+   <!-- <link href="python.css" rel="stylesheet" /> -->
+
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+   <!-- Font Awesome -->
+   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+   <!-- Bootstrap Bundle with Popper -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js">
+   </script>
+
+   <style>
+      
+      .popup-close {
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         position: absolute;
+         top: 2rem;
+         right: 2rem;
+         padding: 0.5rem;
+         background-color: black;
+         border-radius: 50%;
+         cursor: pointer;
+      }
+
+      .popup-close {
+         font-size: 1rem;
+         color: white;
+      }
+
+      .features-point {
+         border: 1px solid #080808;
+         color: black;
+         margin-top: 20px;
+         margin-bottom: 30px;
+         margin-right: 25px;
+         height:80px;
+      }
+
+      .features-point .icon-text-wrap {
+         padding: 20px;
+         display: flex;
+      }
+
+      .icon-text-wrap i {
+         font-size: 30px;
+         color: blue;
+      }
+
+      .icon-text-wrap span {
+         font-size: 20px;
+         padding-left: 20px;
+         font-weight: 600;
+      }
+
+      div-1 {   
+  animation: showup 7s infinite;
+}
+
+div-2 {
+  width:0px;
+  animation: reveal 7s infinite;
+}
+
+div-2 h1 {
+  margin-left:-355px;
+  animation: slidein 7s infinite;
+}
+
+@keyframes showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes slidein {
+    0% { margin-left:-800px; }
+    20% { margin-left:-800px; }
+    35% { margin-left:0px; }
+    100% { margin-left:0px; }
+}
+
+@keyframes reveal {
+    0% {opacity:0;width:0px;}
+    20% {opacity:1;width:0px;}
+    30% {width:355px;}
+    80% {opacity:1;}
+    100% {opacity:0;width:355px;}
+}
+ 
+.card_container{
+margin-top: 39px;
+margin-left: 6%; 
+
+} 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  max-width: 200px;
+  text-align: center;
+  font-family: arial;
+ display: flex;
+}
+.title {
+  color: grey;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+button:hover, a:hover {
+  opacity: 0.7;
+}
+
+.services { 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-direction: column; 
+    margin: 4.8rem 0; 
+    padding: 0 5rem; 
+} 
+  
+.my-row { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    margin: 2rem 0; 
+} 
+  
+.my-row .my-col { 
+    text-align: center; 
+    width: 30%; 
+} 
+  
+.my-card { 
+    text-align: center; 
+    display: flex; 
+    
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 20px; 
+    background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); 
+    padding: 1rem; 
+} 
+  
+.my-card-service { 
+    text-align: center; 
+    display: flex; 
+    height: 500px;
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 20px; 
+    background-image: linear-gradient(#74D7BB, #53C8B6, #35A99C); 
+    padding: 1rem; 
+} 
+.icon { 
+    height: 100px; 
+    width: 100px; 
+    border-radius: 50%; 
+    background-color: #363D73; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+} 
+  
+.icon svg { 
+    font-size: 30px; 
+    color: #fff; 
+} 
+
+.portfolio { 
+    margin: 4.8rem 0; 
+    padding: 0 5rem; 
+} 
+  
+.port-card { 
+    padding: 0 !important; 
+    background: none !important; 
+    border: 2px solid #000; 
+} 
+  
+.port-card .image { 
+    width: 100%; 
+    transition: .5s ease;
+    backface-visibility: hidden;
+    animation: fadeIn 10s infinite; 
+} 
+  
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+.port-card .image img { 
+    height: 200px; 
+    width: 100%; 
+    border-top-right-radius: 20px; 
+    border-top-left-radius: 20px; 
+    
+} 
+
+.port-card:hover .image{
+   opacity: 0.3;
+}
+
+
+@keyframes typewriter {
+            from {
+                width: 0%;
+            }
+ 
+            to {
+                width: 50%;
+            }
+        }
+ 
+        @keyframes blink {
+            from {
+                border-color: black;
+            }
+ 
+            to {
+                border-color: transparent;
+            }
+        }
+
+   </style>
+
+   <title>Software courses</title>
+</head>
+
+<body>
+   <!-- <div class="popup">
+      <div class="contentBox">
+
+         <div class="popup-close">
+            <i class="fa-solid fa-xmark"></i>
+         </div>
+         
+      </div>
+   </div> -->
+
+
+   <nav>
+      <div class="logo">
+         <h1><span>SOFTWARE</span> WORLD</h1>
+      </div>
+      <ul class="navlinks">
+         <li>
+            <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+         </li>
+         <!-- <li>
+            <a href="#"><i class="fa-brands fa-servicestack"></i>Services</a>
+         </li> -->
+         <li>
+            <a href="courses.html"><i class="fa-brands fa-discourse"></i> Courses</a>
+         </li>
+         <li>
+            <a href="contact.html"><i class="fa-solid fa-address-book"></i> Contact Us</a>
+         </li>
+      </ul>
+
+      <ul class="social-links">
+         <li>
+            <a href="https://in.linkedin.com/" class="linkedin"><i class="fi fi-brands-linkedin"></i></a>
+         </li>
+         <li>
+            <a href="https://x.com/i/flow/login" class="twitter"><i class="fi fi-brands-twitter"></i></a>
+         </li>
+         <li>
+            <a href="https://www.facebook.com/" class="facebook"><i class="fi fi-brands-facebook"></i></a>
+         </li>
+         <li>
+            <a href="https://www.youtube.com/" class="youtube"><i class="fi fi-brands-youtube"></i></a>
+         </li>
+      </ul>
+
+
+   </nav>
+
+
+   <div class="banner">
+      
+      <img src="new.jpg" style="width: 1650px;height: 454px;">
+      <div class="banner-text">
+         <div style="padding:  12 13;">
+            <div-1 style="font-size: 100px; color: #080808;">Welcome</div-1> 
+<div-2> 
+  <h1 style="color: #df2d16; font-size: 50px;">into world of Software</h1>
+</div-2>
+            
+<br>
+<br>
+            <h5><i class="fa-brands fa-whatsapp"></i> 8689831655</h5>
+            <h5><i class="fa-solid fa-envelope"></i> ankitaakash2022@gmail.com</h5>
+           
+         </div>
+      </div>
+   </div>
+
+
+   
+   <h1 style="text-align: center; color: blue; animation: text 10s infinite;"> Highlight of Our Coaching</h1>
+<br>
+<br>
+<br>
+   <div class="wrapper next-row">
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-solid fa-laptop"></i>
+               <span> Learn Online</span>
+            </span>
+         </div>
+      </div>
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-brands fa-whatsapp"></i>
+                              <span> Mobile Friendly</span>
+            </span>
+         </div>
+      </div>
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-solid fa-certificate"></i>
+               <span>Certificate of Trainning</span>
+            </span>
+         </div>
+      </div>
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-regular fa-handshake"></i>
+               <span>Placement Assistance</span>
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="wrapper next-row">
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-solid fa-check"></i>
+               <span> 5 Assignment and 1 project</span>
+            </span>
+         </div>
+      </div>
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-solid fa-language"></i>
+               <span> Learn in English ,hindi,Marathi</span>
+            </span>
+         </div>
+      </div>
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-solid fa-exchange-alt"></i>
+               <span>Beginer Friendly</span>
+            </span>
+         </div>
+      </div>
+      <div class="wid-25 arrange-left">
+         <div class="features-point">
+            <span class="icon-text-wrap">
+               <i class="fa-solid fa-phone-volume"></i>
+               <span>Dought Clearing</span>
+            </span>
+         </div>
+      </div>
+   </div>
+   <!-- <script src="script.js"></script>
+   <h1 style="color: black; text-align: center;">TRENDING COURSES</h1>
+   <br> -->
+   <section class="portfolio" id="portfolio"> 
+      <div class="portfolio-heading"> 
+          <h1 class="my-heading text-center" style="margin-left:450px; white-space: nowrap;
+          overflow: hidden;
+          animation: typewriter 2s steps(13) infinite alternate,
+              blink 800ms steps(13) infinite normal;
+          border-right: 5px solid black;">TRENDING COURSES</h1> 
+      </div> 
+      <div class="portfolio-content"> 
+          <div class="my-row"> 
+              <div class="my-col"> 
+                  <div class="my-card port-card"> 
+                      <div class="image"> 
+                          <img src="htmlnew.jpg" 
+                               alt="Web Design Image"> 
+                      </div> 
+                      
+                        
+                      <h3 class="greet-heading blue-text">Web Design</h3> 
+                      <p class="small-para blue-text">Designing</p>
+                      <a href="web.html" class="card__button">View More</a> 
+                      
+                  </div> 
+
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card port-card"> 
+                      <div class="image"> 
+                          <img src="javascript.png" 
+                               alt="Web Development Image"> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                            JavaScript
+                        </h3> 
+                      <p class="small-para blue-text">Development</p> 
+                      <a href="javascript.html" class="card__button">View More</a>
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card port-card"> 
+                      <div class="image"> 
+                          <img src="java.jpg" alt="SEO Image"> 
+                      </div> 
+                      <h3 class="greet-heading blue-text">Java</h3> 
+                      <p class="small-para blue-text">Optimization</p> 
+                      <a href="java.html" class="card__button">View More</a>
+                  </div> 
+              </div> 
+          </div> 
+          <div class="my-row"> 
+              <div class="my-col"> 
+                  <div class="my-card port-card"> 
+                      <div class="image"> 
+                          <img src="datasceience.jpg" 
+                               alt="Content Writting Image"> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                            Data Science
+                        </h3> 
+                      <p class="small-para blue-text">Analytics</p> 
+                      <a href="#" class="card__button">View More</a>
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card port-card"> 
+                      <div class="image"> 
+                          <img src="mongo.png" 
+                               alt="Wordpress Image"> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                            MongoDB
+                        </h3> 
+                      <p class="small-para blue-text"> 
+                            Database Management System 
+                        </p> 
+                        <a href="#" class="card__button">View More</a>
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card port-card"> 
+                      <div class="image"> 
+                          <img src="images.jpg" 
+                               alt="Video Editing Image"> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                            Python
+                        </h3> 
+                      <p class="small-para blue-text">Machine Learning</p> 
+                      <a href="python.html" class="card__button">View More</a>
+                  </div> 
+              </div> 
+          </div> 
+      </div> 
+  </section> 
+ 
+  <section class="services" id="services"> 
+      <div class="services-heading"> 
+          <h1 class="my-heading text-center" style="margin-left: 270px; white-space: nowrap;
+          overflow: hidden;
+          animation: typewriter 2s steps(13) infinite alternate,
+              blink 800ms steps(13) infinite normal;
+          border-right: 5px solid black;">My Services</h1> 
+      </div> 
+      <div class="services-content"> 
+          <div class="my-row"> 
+              <div class="my-col"> 
+                  <div class="my-card-service"> 
+                      <div class="icon"> 
+                          <i class="fas fa-paint-brush"></i> 
+                      </div> 
+                      <h3 class="greet-heading blue-text">Web Design</h3> 
+                      <p class="small-para"> 
+                          Web development refers to the creating,  
+                            building, and maintaining 
+                          of websites. It includes aspects such as  
+                            web design, web publishing, 
+                          web programming, and database management.  
+                            It is the creation of an 
+                          application that works over the internet  
+                            i.e. websites. 
+                      </p> 
+                      <p class="small-para"> 
+                          Web development refers to the creating,  
+                            building, and maintaining 
+                          of websites. It includes aspects such as  
+                            web design, web publishing, 
+                          web programming, and database management.  
+                            It is the creation of an 
+                          application that works over the internet  
+                            i.e. websites. 
+                      </p> 
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card-service"> 
+                      <div class="icon"> 
+                          <i class="fa-solid fa-code"></i> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                            Java Development 
+                        </h3> 
+                      <p class="small-para"> 
+                        Java is a programming language and computing platform first released by Sun Microsystems in 1995. Java is a multi-platform, object-oriented, and network-centric language that can be used as a platform in itself. 
+                      </p> 
+                      <p class="small-para"> 
+                        The Java Plug-in software is a component of the Java Runtime Environment (JRE). The JRE allows some applications written in the Java programming language to launch via some browsers. The Java Plug-in software is not a standalone program and cannot be installed separately. 
+                      </p> 
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card-service"> 
+                      <div class="icon"> 
+                          <i class="fas fa-chart-line"></i> 
+                      </div> 
+                      <h3 class="greet-heading blue-text">DataBase Management</h3> 
+                      <p class="small-para"> 
+                        A Database Management System (DBMS) is a software system that is designed to manage and organize data in a structured manner. It allows users to create, modify, and query a database, as well as manage the security and access controls for that database.
+                      </p> 
+                     <p class="small-para">
+                        DBMS provides an environment to store and retrieve the data in convenient and efficient manner.
+                     </p>
+                  </div> 
+              </div> 
+          </div> 
+          <div class="my-row"> 
+              <div class="my-col"> 
+                  <div class="my-card-service"> 
+                      <div class="icon"> 
+                          <i class="fas fa-quote-left"></i> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                        Machine Learning
+                        </h3> 
+                      <p class="small-para"> 
+                        Machine learning (ML) is a branch of artificial intelligence (AI) and computer science that focuses on the using data and algorithms to enable AI to imitate the way that humans learn, gradually improving its accuracy.
+                      </p> 
+                      <p class="small-para"> 
+                        Neural networks, or artificial neural networks (ANNs), are comprised of node layers, containing an input layer, one or more hidden layers, and an output layer. Each node, or artificial neuron, connects to another and has an associated weight and threshold.
+                      </p> 
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card-service"> 
+                      <div class="icon"> 
+                          <i class="fab fa-wordpress-simple"></i> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                           Datascience 
+                        </h3> 
+                      <p class="small-para"> 
+                        Data science is the study of data to extract meaningful insights for business. It is a multidisciplinary approach that combines principles and practices from the fields of mathematics, statistics, artificial intelligence, and computer engineering to analyze large amounts of data.
+                      </p> 
+                      <p class="small-para"> 
+                        This analysis helps data scientists to ask and answer questions like what happened, why it happened, what will happen, and what can be done with the results.
+                      </p> 
+                  </div> 
+              </div> 
+              <div class="my-col"> 
+                  <div class="my-card-service"> 
+                      <div class="icon"> 
+                          <i class="fas fa-video"></i> 
+                      </div> 
+                      <h3 class="greet-heading blue-text"> 
+                            Data Analytics
+                        </h3> 
+                      <p class="small-para"> 
+                        Data analytics converts raw data into actionable insights. It includes a range of tools, technologies, and processes used to find trends and solve problems by using data. Data analytics can shape business processes, improve decision-making, and foster business growth.
+                      </p> 
+                      <p class="small-para"> 
+                        Data analytics can enhance operations, efficiency, and performance in numerous industries by shining a spotlight on patterns.Implementing these techniques can give companies and businesses a competitive edge
+                      </p> 
+                  </div> 
+              </div> 
+          </div> 
+      </div> 
+  </section> 
+
+
+   <h1 style="text-align: center; font-size: 40px;margin-left:450px; white-space: nowrap;
+   overflow: hidden;
+   animation: typewriter 2s steps(13) infinite alternate,
+       blink 800ms steps(13) infinite normal;
+   border-right: 5px solid black;">THE EXCELLENT EDUCATOR
+   </h1>
+  <div class="card_container">
+   <div class="card">
+      <img src="teacher1.jpg" alt="John" style="width:100%">
+      <h1>John Doe</h1>
+      <p class="title">CEO & Founder</p>
+      <p>Harvard University</p>
+      <div style="margin: 4px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+</div>
+<div class="card" style="margin-top: -385px; margin-left: 20%;">
+      <img src="teacher2.jpg" alt="John" style="width:100%">
+      <h1>Jolly Don</h1>
+      <p class="title">Fullstack Trainner</p>
+      <p>Harvard University</p>
+      <div style="margin: 4px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+</div>
+<div class="card"style="margin-top: -385px; margin-left: 40%;">
+      <img src="teacher3.jpg" alt="John" style="width:100%">
+      <h1>Simthy</h1>
+      <p class="title">Java Trainner</p>
+      <p>Parul University</p>
+      <div style="margin: 4px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+</div>
+<div class="card"style="margin-top: -385px; margin-left: 60%;">
+      <img src="teacher4.jpg" alt="John" style="width:100%">
+      <h1>Satish M.</h1>
+      <p class="title">Front End Trainner</p>
+      <p>Pune University</p>
+      <div style="margin: 4px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+</div>
+<div class="card"style="margin-top: -385px; margin-left: 80%;">
+      <img src="teacher5.jpg" alt="John" style="width:100%">
+      <h1>Shah R.</h1>
+      <p class="title">Backend Trainner</p>
+      <p>Mumbai University</p>
+      <div style="margin: 4px 0;">
+        <a href="#"><i class="fa fa-dribbble"></i></a> 
+        <a href="#"><i class="fa fa-twitter"></i></a>  
+        <a href="#"><i class="fa fa-linkedin"></i></a>  
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+      </div>
+      <p><button>Contact</button></p>
+      </div>
+    </div>
+   </div>
+   <br>
+   <br>
+   <br>
+   <h1 class="my-heading text-center" style="margin-left:450px; white-space: nowrap;
+   overflow: hidden;
+   animation: typewriter 3s steps(13) infinite alternate,
+       blink 800ms steps(13) infinite normal;
+   border-right: 5px solid black;">Frequently Asked Questions</h1> 
+   <div class='faq'>
+      <input id='faq-a' type='checkbox'>
+      <label for='faq-a'>
+        <p class="faq-heading">What courses you are offering?</p>
+        <div class='faq-arrow'></div>
+          <p class="faq-text">Our institute offering courses based on Frontend Technology,Fullstack , Backend , database</p>
+      </label>
+      <input id='faq-b' type='checkbox'>
+      <label for='faq-b'>
+        <p class="faq-heading">How long does it take to upgrade my skills for Fullstack?</p>
+        <div class='faq-arrow'></div>
+          <p class="faq-text">Upgrading is a slow process and will take around 3-10 momths . <strong>In order to control the risk and secure the space you earned, we will gradually process it.</strong> during this time you can still use your account as normal as well as apply for the company.</p>
+      </label>
+      <input id='faq-c' type='checkbox'>
+      <label for='faq-c'>
+        <p class="faq-heading">What do you need to do the upgrade?</p>
+        <div class='faq-arrow'></div>
+          <p class="faq-text">Required techical skills and greedy to acquire knowledge</p>
+      </label>
+      <input id='faq-d' type='checkbox'>
+      <label for='faq-d'>
+        <p class="faq-heading">Where do I find my personal Dropbox referral link?</p>
+        <div class='faq-arrow'></div>
+          <p class="faq-text">Acoording to our expertised tutor,Log in to the Dropbox website and get your referral link: www.dropbox.com/referral. Copy the link (example link: <strong>https://db.tt/xYxYzyXy</strong>) and send it via eBay message. </p>
+      </label>
+      <input id='faq-e' type='checkbox'>
+      <label for='faq-e'>
+        <p class="faq-heading">Can I split the purchased space between several accounts?</p>
+        <div class='faq-arrow'></div>
+          <p class="faq-text">Yes, you can! Just send me all the referral links during the checkout process, including a short note, what account should receive which amount of space.</p>
+      </label>
+       </div>
+
+       <br>
+       <br>
+       <br>
+   <section class="contact" id="contact"> 
+      <div class="contact-heading"> 
+          <h1 class="my-heading text-center" style="margin-left:450px; white-space: nowrap;
+          overflow: hidden;
+          animation: typewriter 3s steps(13) infinite alternate,
+              blink 800ms steps(13) infinite normal;
+          border-right: 5px solid black;">Contact Me</h1> 
+      </div> 
+      <div class="contact-content"> 
+          <div class="contact-form-container"> 
+              <h1 class="greet-heading">Get In Touch</h1> 
+              <form class="contact-form"> 
+                  <input class="form-controls" type="text" 
+                         placeholder="Your Name"> 
+                  <input class="form-controls" type="text" 
+                         placeholder="Your Email"> 
+                  <input class="form-controls" type="text" 
+                         placeholder="Your Phone"> 
+                  <textarea class="form-controls" 
+                            placeholder="Write your message" 
+                            name="message" id="" cols="30"
+                            rows="10"> 
+                    </textarea> 
+                  <input class="form-btn btn common-btn" 
+                         type="submit" value="Send Message"> 
+              </form> 
+          </div> 
+          <div class="contact-details"> 
+              <h1 class="greet-heading"> Contact Details</h1> 
+              <div class="details"> 
+                  <h5 class="contact-heading">EMAIL</h5> 
+                  <p class="contact-text">ankitaakash2022@gmail.com</p> 
+              </div> 
+              <div class="details"> 
+                  <h5 class="contact-heading">PHONE</h5> 
+                  <p class="contact-text">+91 8689831655 </p> 
+              </div> 
+              <div class="details"> 
+                  <h5 class="contact-heading">FAX</h5> 
+                  <p class="contact-text">+91 0123456789</p> 
+              </div> 
+              <div class="details"> 
+                  <h5 class="contact-heading">ADDRESS</h5> 
+                  <p class="contact-text">San Francisco, CA</p> 
+                  <p>4th Floor8 Lower</p> 
+                  <p>San Francisco street, M1 50F</p> 
+              </div> 
+          </div> 
+      </div> 
+  </section> 
+
+   <div class="form-popup" id="chat-container">
+
+
+      <div id="chat-header">
+         Chatbot
+      </div>
+      <div id="chat-window">
+         <div id="conversation">
+<p>Welcome ,
+       How Can I help You?</p>
+         </div>
+         <div id="options">
+         </div>
+      </div>
+      <div id="input-container">
+         <input type="text" id="user-input" placeholder="Type your message here...">
+         <button id="send-button">Send</button>
+         <button id="cancel-button" onclick="closechat()">Close</button>
+
+      </div>
+
+   </div>
+<br><br><br><br>
+   <div class="wrapper next-row">
+      <div class="footer">
+        <div class="wid-25 arrange-left margin-right-5">
+          <div class="logo">
+            <h1><span>
+               Software
+            </span><span>World</span></h1>
+          </div>
+          <p class="footer-desc">
+            <i class="fa-solid fa-circle" style="font-size: 13px;"></i> Ethical Hacking Course<br>
+            <i class="fa-solid fa-circle" style="font-size: 13px;"></i> Advanced Excel Course<br>
+            <i class="fa-solid fa-circle" style="font-size: 13px;"></i> Data Science Course<br>
+            <i class="fa-solid fa-circle" style="font-size: 13px;"></i> Machine Learning Course<br>
+          
+  
+          </p>
+          <ul class="contact-list">
+            <li>
+             123 Street, New York,
+              USA
+            </li>
+            <li>info@example.com</li>
+            <li>+012 345 67890</li>
+          </ul>
+        </div>
+        <div class="wid-25 quick-links arrange-left">
+          <h3>Quick Links</h3>
+          <ul>
+            <li>
+              <a href="#"><i class="fa fa-angle-right"></i><span>Home</span></a>
+            </li>
+            <li>
+              <a href="courses.html"><i class="fa fa-angle-right"></i><span>Our Courses</span></a>
+            </li>
+           
+           
+          </ul>
+        </div>
+     
+       
+          <div class="wid-25 arrange-left">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!3m1!4b1!4m6!3m5!1s0x3bc2c1179bf5bebb:0xd6ed795ac7d53c39!8m2!3d18.5558422!4d73.9210869!16s%2Fg%2F11rgr80wtp?hl=en&entry=ttu"
+            width="350" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+      </div>
+    </div>
+    <div class="copy-right">
+      <div>
+        © </b>. All Rights Reserved. Designed by
+        <b>softwareworld</b>
+      </div>
+    </div>
+    </div>
+
+   <script>
+
+
+      function closechat() {
+         document.getElementById("chat-container").style.display = "none";
+      }
+
+
+
+
+   </script>
+
+   <!--=============== SWIPER JS ===============-->
+   <script src="swiper-bundle.min.js"></script>
+
+   <!--=============== MAIN JS ===============-->
+   <script src="main.js"></script>
+
+ 
+   <script>
+      const popup = document.querySelector('.popup');
+      const close = document.querySelector('.popup-close');
+      const chatpopup = document.querySelector('.form-popup');
+
+
+      window.onload = function () {
+        
+         setTimeout(function () {
+            chatpopup.style.display = "block"
+         }, 20000)
+      }
+
+      
+   </script>
+   
+
+</body>
+
+</html>
